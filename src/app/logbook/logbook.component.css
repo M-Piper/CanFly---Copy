@@ -1,0 +1,77 @@
+.logbook-container {
+    margin: 20px;
+  }
+  
+  .logbook-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #F2494C;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .logbook-table th,
+  .logbook-table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #F2494C;
+  }
+  
+  .logbook-table th {
+    background-color: #F9AA18;
+    color: black;
+  }
+  
+  .logbook-table tbody tr:nth-child(even) {
+    background-color: #F9C996;
+  }
+  
+  .logbook-table tbody tr:nth-child(odd) {
+    background-color: #F39891;
+  }
+  
+  .logbook-table tbody td {
+    color: black;
+  }
+  
+  .logbook-table thead tr,
+  .logbook-table tbody tr:last-child {
+    border-bottom: 2px solid #F2494C;
+  }
+  
+  .logbook-table tbody tr td:last-child {
+    border-right: 2px solid #F2494C;
+  }
+  
+  .button-header {
+    padding-bottom: 10px;
+  }
+
+  .delete-button {
+    background-color: #f2494c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #d32f2f;
+  }
+
+  .add-flight-btn {
+    padding: 2rem 5rem;
+    font-size: 4rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #F2494C;
+    color: #FFF;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-flight-btn:hover {
+    background-color: #555;
+  }

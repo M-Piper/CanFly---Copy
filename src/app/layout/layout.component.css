@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This makes sure padding does not affect the total width/height of an element */
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+ /* background-color: #66B2B0;*/
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 1rem;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+/*icon images*/
+nav ul li img {
+  width: 4rem;
+  height: 4rem;
+  display: block;   /* Treat image as block element */
+  margin: 0 auto;   /* Center the image */
+}
+
+.logo img {
+  width: auto;
+  height: 10rem;
+  margin: 0 auto;
+}
+
+.menu {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 18px;
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  color: #0A4054;
+  text-decoration: none; /* Removing the underline */
+}
+
+
+.menu:hover {
+  color: #555;
+}
+
+
+.menu img {
+  margin-bottom: 10px;  /* Space between image and text */
+}
+
+nav ul li a:hover img {
+  opacity: 0.7;
+}

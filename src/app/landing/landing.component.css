@@ -1,0 +1,115 @@
+:root {
+    --darkBlue: #0A4054;
+    --lightgrey: #E7E6E6;
+    --tealdark: #66B2B0;
+    --pinkdark: #F2494C;
+    --pinklight: #F39891;
+    --orangedark: #F9AA18;
+    --orangelight: #F9C996;
+    --teallight: #9FD1D0;
+    --backgroundTeal: #CEE8E7;
+    --backgroundPink: #FCD8D9;
+    --backgroundBlue: #D9F2FB;
+    --brightblue: #0563C1;
+    --white: #FFFF;
+    --font-family: Gill Sans Ultra Bold;
+  }
+
+body {
+  font-family: 'Gill Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 3rem;
+}
+
+.square {
+  flex: 1;
+  height: 300px;
+  margin: 0 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 0;
+}
+
+.bottom-text {
+  text-align: center;
+  margin-top: auto;
+  padding: 2% 0;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #0A4054;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #0A4054;
+}
+
+.pie-chart-placeholder {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-flight-btn {
+  padding: 2rem 5rem;
+  font-size: 4rem;
+  font-family: 'Gill Sans', sans-serif;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #F2494C;
+  color: #FFF;
+  transition: background-color 0.3s ease;
+}
+
+.add-flight-btn:hover {
+  background-color: #555;
+}
+
+.landing-page {
+  position: absolute; 
+  top: 13rem;          /* Offset from the top */
+  left: 2rem;        /* Offset from the right */
+  padding: 5px 10px;  /* Some padding for aesthetics */
+  border-radius: 5px; /* Optional: Curved edges */
+}
+
+.square {
+  border-radius: 10px;  /* Slight curve at the corners */
+}
+
+.square-teal {
+  background-color: #66B2B0;
+  border: 3px solid #4A8A8D;  /* Darker shade of teal for border */
+  color: var(--white);  /* For contrast against teal background */
+}
+
+.square-pink {
+  background-color: #F39891;
+  border: 3px solid #E57779;  /* Darker shade of pink for border */
+  color: var(--darkBlue);  /* For contrast against pink background */
+}
+
+.square-orange {
+  background-color: #F9AA18;
+  border: 3px solid #D68F13;  /* Darker shade of orange for border */
+  color: var(--white);  /* For contrast against orange background */
+}

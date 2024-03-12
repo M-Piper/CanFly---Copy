@@ -1,0 +1,274 @@
+<form [formGroup]="flightForm" (ngSubmit)="addFlight()">
+
+ <!-- Button row -->
+ <div class="row">
+    <div class="field-group">
+      <button id="submitButton" type="submit">Submit</button> <!--submit button-->
+    </div>
+    <div class="field-group"> <!-- Dropdown for Type -->
+      <label id="selectLabel" for="aircraftType">Select Activity Type:</label>
+      <select id="aircraftType" (change)="onAircraftTypeChange($event)">
+      <option value="" selected disabled>Select an activity type</option>
+      <option value="aeroplane">Aeroplane</option>
+      <option value="helicopter">Helicopter</option>
+      <option value="gyrocopter">Gyrocopter</option>
+      <option value="glider">Glider</option>
+      <option value="balloon">Balloon</option>
+      <option value="ultra-light">Ultra-light Aeroplane</option>
+    </select>
+    </div>
+    <div class="field-group" *ngIf="selectedAircraftType === 'aeroplane'"> <!-- Dropdown for Engine Type -->
+        <label id="engineTypeLabel" for="engineType">Select Engine Type:</label>
+        <select id="engineType" (change)="onEngineTypeChange($event)">
+          <option value="" selected disabled>Select an engine type</option>
+          <option value="single">Single</option>
+          <option value="multiEngine">Multi-Engine</option>
+        </select>
+      </div>
+            
+    <div class="field-group">
+      <button id="optionButton" (click)="showCrossCountryInputs()"><b>+</b> Cross Country </button> <!--cross country button-->
+    </div>
+    <div class="field-group">
+      <button id="optionButton"(click)="showInstrumentInputs()"><b>+</b>Instrument</button> <!--instrument button-->
+    </div>
+    <div class="field-group"> 
+        <label id="selectLabel" for="notesType">Notes:</label> <!-- Dropdown for Notes -->
+        <select id="notesType" (change)="onNoteTypeChange($event)">
+          <option value="" selected>Select a Note Type</option>
+          <option value="dualInstructionGivenNotes">Dual Instruction Given Notes</option>
+          <option value="floatTimeNotes">Float Time Notes</option>
+          <option value="VFRSimulatorNotes">VFR Simulator Notes</option>
+        </select>
+      </div>
+  </div>
+
+<span class="show-message" *ngIf="showMessage">New entry has been added</span>
+
+<!-- Row 1 -->
+<div class="row">
+    <div class="field-group">
+        <label for="Date">Date:</label>
+        <div class="date-dropdown-wrapper">
+            <input type="text" id="date" formControlName="date" placeholder="yyyy-mm-dd">
+        </div>
+    </div>
+    <div class="field-group">
+        <label for="AircraftType">Aircraft Type:</label>
+        <input type="text" id="aircraftType" formControlName="aircraftType">
+    </div>
+    <div class="field-group">
+        <label for="Registration">Registration:</label>
+        <input type="text" id="registration" formControlName="registration">
+</div>
+</div>
+   <!-- Row 2 -->
+<div class="row">
+    <div class="field-group">
+        <label for="RouteFrom">Route From:</label>
+        <input type="text" id="routeFrom" formControlName="routeFrom">
+    </div>
+    <div class="field-group">
+        <label for="RouteVia">Route Via:</label>
+        <input type="text" id="routeVia" formControlName="routeVia">
+    </div>
+    <div class="field-group">
+        <label for="RouteTo">Route To:</label>
+        <input type="text" id="routeTo" formControlName="routeTo">
+    </div>
+</div>
+
+ <!-- Row 3 -->
+ <div class="row">
+    <div class="field-group">
+        <label for="PilotInCommand">Pilot In Command:</label>
+        <input type="text" id="PilotInCommand" formControlName="PilotInCommand">
+    </div>
+    <div class="field-group">
+        <label for="StudentOrCoPilot">Student Or Co-Pilot:</label>
+        <input type="text" id="StudentOrCoPilot" formControlName="StudentOrCoPilot">
+    </div>
+    <div class="field-group">
+        <label for="ActivityExercises">Activity Exercises:</label>
+        <input type="text" id="ActivityExercises" formControlName="ActivityExercises">
+    </div>
+</div>
+
+  <!--conditional options based on dropdown-->
+  <!-- For Single -->
+  <div *ngIf="selectedEngineType === 'single'">
+   <div class="row">
+    <div class="field-group">
+        <label for="SingleEngineDayDualTime">Single Engine Day Dual Time:</label>
+        <input type="number" id="singleEngineDayDualTime" formControlName="singleEngineDayDualTime">
+    </div>
+    <div class="field-group">
+        <label for="SingleEngineNightDualTime">Single Engine Night Dual Time:</label>
+        <input type="number" id="singleEngineNightDualTime" formControlName="singleEngineNightDualTime">
+    </div>
+    <div class="field-group">
+        <label for="SingleEngineDayPICTime">Single Engine Day PIC Time:</label>
+        <input type="number" id="singleEngineDayPICTime" formControlName="singleEngineDayPICTime">
+    </div>
+    <div class="field-group">
+        <label for="SingleEngineNightPICTime">Single Engine Night PIC Time:</label>
+        <input type="number" id="singleEngineNightPICTime" formControlName="singleEngineNightPICTime">
+    </div>
+</div>
+</div>
+
+<!-- For MultiEngine -->
+<div *ngIf="selectedEngineType === 'multiEngine'">
+   <div class="row">
+    <div class="field-group">
+        <label for="MultiEngineDayDualTime">Multi Engine Day Dual Time:</label>
+        <input type="number" id="multiEngineDayDualTime" formControlName="multiEngineDayDualTime">
+    </div>
+    <div class="field-group">
+        <label for="MultiEngineNightDualTime">Multi Engine Night Dual Time:</label>
+        <input type="number" id="multiEngineNightDualTime" formControlName="multiEngineNightDualTime">
+    </div>
+    <div class="field-group">
+        <label for="MultiEngineDayPICTime">Multi Engine Day PIC Time:</label>
+        <input type="number" id="multiEngineDayPICTime" formControlName="multiEngineDayPICTime">
+    </div>
+    <div class="field-group">
+        <label for="MultiEngineDaySICTime">Multi Engine Day SIC Time:</label>
+        <input type="number" id="multiEngineDaySICTime" formControlName="multiEngineDaySICTime">
+    </div>
+    <div class="field-group">
+        <label for="MultiEngineNightPICTime">Multi Engine Night PIC Time:</label>
+        <input type="number" id="multiEngineNightPICTime" formControlName="multiEngineNightPICTime">
+    </div>
+    <div class="field-group">
+        <label for="MultiEngineNightSICTime">Multi Engine Night SIC Time:</label>
+        <input type="number" id="multiEngineNightSICTime" formControlName="multiEngineNightSICTime">
+    </div>
+</div>
+</div>
+
+    <!-- Row 5-Instrument -->
+    <div *ngIf="displayInstrument">
+    <div class="row">
+    <div class="field-group">
+        <label for="InstrumentIMC">Instrument IMC:</label>
+        <input type="number" id="instrumentIMC" formControlName="instrumentIMC">
+    </div>
+    <div class="field-group">
+        <label for="InstrumentHood">Instrument Hood:</label>
+        <input type="number" id="instrumentHood" formControlName="instrumentHood">
+    </div>
+    <div class="field-group">
+        <label for="InstrumentFTD">Instrument FTD:</label>
+        <input type="number" id="instrumentFTD" formControlName="instrumentFTD">
+    </div>
+    <div class="field-group">
+        <label for="InstrumentApproachesCount">Instrument Approaches Count:</label>
+        <input type="number" id="instrumentApproachesCount" formControlName="instrumentApproachesCount">
+    </div>
+</div>
+</div>
+
+<!--Cross Country Inputs-->
+<div *ngIf="displayCrossCountry">
+ <!-- Row ? -->
+ <div class="row">
+        <div class="field-group">
+            <label for="CrossCountryDayDualTime">Cross Country Day Dual Time:</label>
+            <input type="number" id="crossCountryDayDualTime" formControlName="crossCountryDayDualTime">
+        </div>
+        <div class="field-group">
+            <label for="CrossCountryNightDualTime">Cross Country Night Dual Time:</label>
+            <input type="number" id="crossCountryNightDualTime" formControlName="crossCountryNightDualTime">
+        </div>
+        <div class="field-group">
+            <label for="CrossCountryDayPICTime">Cross Country Day PIC Time:</label>
+            <input type="number" id="crossCountryDayPICTime" formControlName="crossCountryDayPICTime">
+        </div>
+        <div class="field-group">
+            <label for="CrossCountryNightPICTime">Cross Country Night PIC Time:</label>
+            <input type="number" id="crossCountryNightPICTime" formControlName="crossCountryNightPICTime">
+        </div>
+</div>
+</div>
+
+<!--balloon specific inputs-->
+<div class="field-group" *ngIf="selectedAircraftType === 'balloon'"> <!-- Dropdown for Engine Type -->
+    
+    <div class="row">
+        <div class="field-group">    
+        <label for="untetheredBalloon">Tethered or Untethered?:</label>
+        <input type="text" id="untetheredBalloon" formControlName="untetheredBalloon">
+        </div>
+    </div>
+    
+</div>
+<!-- Dual Instruction Given Notes -->
+<div *ngIf="selectedNoteType === 'DualInstructionGivenNotes'">
+    <div class="row">
+    <div class="field-group">
+    <label for="DualInstructionGivenNotes">Dual Instruction Given Notes:</label>
+    <input type="text" id="dualInstructionGivenNotes" formControlName="dualInstructionGivenNotes">
+    </div>
+    <div class="field-group"></div>
+    <div class="field-group"></div>
+</div>
+</div>
+
+<!-- Float Time Notes -->
+<div *ngIf="selectedNoteType === 'FloatTimeNotes'">
+    <div class="row">
+        <div class="field-group">    
+    <label for="FloatTimeNotes">Float Time Notes:</label>
+    <input type="text" id="floatTimeNotes" formControlName="floatTimeNotes">
+</div>
+<div class="field-group"></div>
+<div class="field-group"></div>
+</div>
+</div>
+
+<!-- VFR Simulator Notes -->
+<div *ngIf="selectedNoteType === 'VFRSimulatorNotes'">
+    <div class="row">
+        <div class="field-group">    
+    <label for="VFRSimulatorNotes">VFR Simulator Notes:</label>
+    <input type="text" id="VFRSimulatorNotes" formControlName="VFRSimulatorNotes">
+</div>
+<div class="field-group"></div>
+<div class="field-group"></div>
+</div>
+</div>
+
+<!-- For Helicopter -->
+<div *ngIf="selectedAircraftType === 'helicopter'">
+    <div class="row">
+     <div class="field-group">
+         <label for="MultiEngineDayDualTime">Multi Engine Day Dual Time:</label>
+         <input type="number" id="multiEngineDayDualTime" formControlName="multiEngineDayDualTime">
+     </div>
+     <div class="field-group">
+         <label for="MultiEngineNightDualTime">Multi Engine Night Dual Time:</label>
+         <input type="number" id="multiEngineNightDualTime" formControlName="multiEngineNightDualTime">
+     </div>
+     <div class="field-group">
+         <label for="MultiEngineDayPICTime">Multi Engine Day PIC Time:</label>
+         <input type="number" id="multiEngineDayPICTime" formControlName="multiEngineDayPICTime">
+     </div>
+     <div class="field-group">
+         <label for="MultiEngineDaySICTime">Multi Engine Day SIC Time:</label>
+         <input type="number" id="multiEngineDaySICTime" formControlName="multiEngineDaySICTime">
+     </div>
+     <div class="field-group">
+         <label for="MultiEngineNightPICTime">Multi Engine Night PIC Time:</label>
+         <input type="number" id="multiEngineNightPICTime" formControlName="multiEngineNightPICTime">
+     </div>
+     <div class="field-group">
+         <label for="MultiEngineNightSICTime">Multi Engine Night SIC Time:</label>
+         <input type="number" id="multiEngineNightSICTime" formControlName="multiEngineNightSICTime">
+     </div>
+ </div>
+ </div>
+
+
+</form>
+  
