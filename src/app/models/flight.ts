@@ -5,7 +5,7 @@ interface IObjectKeys {
 export interface Flight extends IObjectKeys{
     Id?: number;
     Date?: Date;
-    AircraftType? : string;
+    AircraftTypeID? : number;
     EngineType?: string;
     Registration?: string;
     PilotInCommand?: string;

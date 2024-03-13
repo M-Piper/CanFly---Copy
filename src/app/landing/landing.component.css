@@ -12,11 +12,16 @@
     --backgroundBlue: #D9F2FB;
     --brightblue: #0563C1;
     --white: #FFFF;
-    --font-family: Gill Sans Ultra Bold;
+  }
+
+  .madimi-one-regular {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
 
 body {
-  font-family: 'Gill Sans', sans-serif;
+  font-family: "Madimi One", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +34,7 @@ body {
   justify-content: space-between;
   width: 80%;
   margin-bottom: 3rem;
+  font-family: "Madimi One", sans-serif;
 }
 
 .square {
@@ -46,6 +52,7 @@ body {
   text-align: center;
   margin-top: auto;
   padding: 2% 0;
+  font-family: "Madimi One", sans-serif;
 }
 
 h2 {
@@ -70,12 +77,13 @@ p {
 
 .add-flight-btn {
   padding: 2rem 5rem;
-  font-size: 4rem;
-  font-family: 'Gill Sans', sans-serif;
+  font-size: 3rem;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 200;
   border: none;
-  border-radius: 25px;
+  border-radius: 35px;
   cursor: pointer;
-  background-color: #F2494C;
+  background-color: #0A4054;;
   color: #FFF;
   transition: background-color 0.3s ease;
 }
@@ -93,23 +101,23 @@ p {
 }
 
 .square {
-  border-radius: 10px;  /* Slight curve at the corners */
+  border-radius: 35px; 
 }
 
 .square-teal {
-  background-color: #66B2B0;
-  border: 3px solid #4A8A8D;  /* Darker shade of teal for border */
-  color: var(--white);  /* For contrast against teal background */
+  background-color: #8cadac;
+  border: 3px solid #4A8A8D; 
+  color: var(--white); 
 }
 
 .square-pink {
-  background-color: #F39891;
-  border: 3px solid #E57779;  /* Darker shade of pink for border */
-  color: var(--darkBlue);  /* For contrast against pink background */
+  background-color: #c1b5e4;
+  border: 3px solid #2b263a; 
+  color: var(--darkBlue); 
 }
 
 .square-orange {
-  background-color: #F9AA18;
-  border: 3px solid #D68F13;  /* Darker shade of orange for border */
-  color: var(--white);  /* For contrast against orange background */
+  background-color: #c3c6d1;
+  border: 3px solid #4b4c6b; 
+  color: var(--white);  
 }
