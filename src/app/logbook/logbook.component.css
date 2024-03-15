@@ -1,11 +1,12 @@
 .logbook-container {
-    margin: 20px;
+    margin: 20px auto;
+    max-width:90%;
   }
   
   .logbook-table {
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #F2494C;
+    border: 1px solid #0370ff;
     border-radius: 10px;
     margin-top: 20px;
   }
@@ -14,20 +15,20 @@
   .logbook-table td {
     padding: 8px;
     text-align: center;
-    border: 1px solid #F2494C;
+    border: 1px solid #0370ff;
   }
   
   .logbook-table th {
-    background-color: #F9AA18;
+    background-color: #8decec;
     color: black;
   }
   
   .logbook-table tbody tr:nth-child(even) {
-    background-color: #F9C996;
+    background-color: #a6c8d3;
   }
   
   .logbook-table tbody tr:nth-child(odd) {
-    background-color: #F39891;
+    background-color: #e0edff;
   }
   
   .logbook-table tbody td {
@@ -36,11 +37,11 @@
   
   .logbook-table thead tr,
   .logbook-table tbody tr:last-child {
-    border-bottom: 2px solid #F2494C;
+    border-bottom: 2px solid #0370ff;
   }
   
   .logbook-table tbody tr td:last-child {
-    border-right: 2px solid #F2494C;
+    border-right: 2px solid  #0370ff;
   }
   
   .button-header {
@@ -48,7 +49,7 @@
   }
 
   .delete-button {
-    background-color: #f2494c;
+    background-color: #2898a7;
     color: white;
     border: none;
     padding: 10px 20px;
