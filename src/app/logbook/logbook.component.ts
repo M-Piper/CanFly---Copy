@@ -9,12 +9,11 @@ import { Flight } from '../models/flight';
 })
 export class LogbookComponent implements OnInit {
   logEntries: Flight[] = [];
-  selectedRowId: number = -1;
+  selectedLogEntryID: number | null = null; // Change to store logEntryID instead of row index
   response: any;
   showErrorMessage: boolean = false;
   showDeletedMessage: boolean = false;
   hiddenColumns: Set<string> = new Set<string>(); // Set to store hidden column keys
-
 
   columnAliases: { [key: string]: string } = {
     'date': 'Date',
@@ -53,7 +52,6 @@ export class LogbookComponent implements OnInit {
     'landings':'# of Landings'
   };
 
-
   constructor(private logsService: LogsService) {}
 
   ngOnInit() {
@@ -74,19 +72,18 @@ export class LogbookComponent implements OnInit {
     }
     return [];
   }
-  
- toggleCheckbox(rowNumber: number) {
-  this.selectedRowId = this.selectedRowId === rowNumber ? -1 : rowNumber;
-}
 
+  toggleCheckbox(rowNumber: number) {
+    const selectedEntry = this.logEntries[rowNumber];
+    this.selectedLogEntryID = selectedEntry['logEntryID'] as number; // Type assertion
+  }
   deleteLog() {
-    if (this.selectedRowId > -1) {
-       const selectedEntry = this.logEntries[this.selectedRowId];
-      this.logsService.deleteLogs(this.selectedRowId).subscribe(
+    if (this.selectedLogEntryID !== null) {
+      this.logsService.deleteLogs(this.selectedLogEntryID).subscribe(
         (response: any) => {
           this.response = response;
           this.getLogs();
-          this.selectedRowId = -1; // Clear selectedRowIds after successful deletion
+          this.selectedLogEntryID = null; // Clear selectedLogEntryID after successful deletion
           this.showDeleteMessage();
         },
         (error: any) => {
@@ -105,7 +102,6 @@ export class LogbookComponent implements OnInit {
       this.showDeletedMessage = false;
     }, 2000); // Hide the message after 3 seconds
   }
-  
 
   determineHiddenColumns() {
     const keys = this.getKeys();
@@ -130,11 +126,9 @@ export class LogbookComponent implements OnInit {
     return this.hiddenColumns.has(key);
   }
 
-  
   getColumnAlias(key: string): string {
-  const alias = this.columnAliases[key] || key;
+    const alias = this.columnAliases[key] || key;
     console.log(`Key: ${key}, Alias: ${alias}`);
     return this.columnAliases[key] || key; // Return the display alias if available, otherwise return the original key
-  
   }
 }

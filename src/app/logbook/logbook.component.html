@@ -18,7 +18,7 @@
   <tbody>
     <tr *ngFor="let entry of logEntries; let i = index" [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }">
       <td class="checkbox-cell">
-        <input type="checkbox" (click)="toggleCheckbox(i)" [checked]="selectedRowId === i" />
+        <input type="checkbox" (click)="toggleCheckbox(i)" [checked]="selectedLogEntryID === i" />
       </td>
       <ng-container *ngFor="let key of getKeys()">
         <td class="data-cell" *ngIf="!isColumnHidden(key)">{{ entry[key] }}</td>

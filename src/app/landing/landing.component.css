@@ -128,3 +128,11 @@ p {
   border: 3px solid #4b4c6b; 
   color: var(--white);  
 }
+
+.pie-chart-container {
+  width: 100%; /* Ensure the canvas fills the container */
+  height: 100%; /* Ensure the canvas fills the container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
