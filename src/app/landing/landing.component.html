@@ -1,10 +1,10 @@
 <body>
     <div class="landing-page">
-        <h2 id="welcome">Welcome {{ pilotFullname  }}</h2>
+        <h2 id="welcome">Welcome {{ pilotFullname }}</h2>
     </div>
     <div class="container">
         <div class="square square-teal">
-            <h2>Current Licences</h2>
+            <h3>Current Licences</h3>
             <p>PPL, CPL, IFR, FLOAT</p>
             <div class="bottom-text">
                 <p>Upcoming Expiries</p>
@@ -12,18 +12,18 @@
             </div>
         </div>
         <div class="square square-pink">
-            <h2>Hours</h2>
+            <h3>Hours</h3>
             <p>Total:  {{ totalHours | number:'1.2-2' }}</p>
             <div class="bottom-text">
                 <p>Pilot-In-Command: {{pilotFullname}}</p>
             </div>
         </div>
         <div class="square square-orange">
-            <h2>ATPL</h2>
+            <h3>ATPL</h3>
             <!-- Placeholder for pie chart -->
             <div class="pie-chart-placeholder">75% Complete</div>
         </div>
     </div>
-    <button class="add-flight-btn" routerLink="/add-flight">ADD FLIGHT</button>
+    <button class="add-flight-btn" routerLink="/add-flight">Add Flight</button>
     </body>
     

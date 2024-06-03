@@ -1,33 +1,26 @@
 <div class="button-header">
-  <button class="delete-button" (click)="deleteLog()">
-    Delete
-  </button>
+  <button class="delete-button" (click)="deleteLog()">Delete</button>
   <span class="error-message" *ngIf="showErrorMessage">Please make a valid selection</span>
-  <span class="deleted-message" *ngIf="showDeletedMessage">Your entry has been deleted</span>
+  <div class="deleted-message" [class.show]="showDeletedMessage" id="deleted-message">Your entry has been deleted</div>
 </div>
+
 <div></div>
+
 <table class="logbook-table">
   <thead>
     <tr>
       <th>Check</th>
-      <th *ngFor="let key of getKeys()" class="header-cell">{{ key }}</th>
+      <ng-container *ngFor="let key of getKeys()">
+        <th class="header-cell" *ngIf="!isColumnHidden(key)">{{ getColumnAlias(key) }}</th>
+      </ng-container>
     </tr>
   </thead>
   <tbody>
-    <tr
-      *ngFor="let entry of logEntries; let i = index"
-      [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }"
-    >
+    <tr *ngFor="let entry of logEntries; let i = index" [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }">
       <td class="checkbox-cell">
-        <input type="checkbox"
-        (click)="toggleCheckbox(i)"
-        [checked]="selectedRowId === i"
-        
-        />
+        <input type="checkbox" (click)="toggleCheckbox(i)" [checked]="selectedRowId === i" />
       </td>
-      <td *ngFor="let key of getKeys()" class="data-cell">
-        {{ entry[key] }}
-      </td>
-    </tr>
-  </tbody>
-</table>
+      <ng-container *ngFor="let key of getKeys()">
+        <td class="data-cell" *ngIf="!isColumnHidden(key)">{{ entry[key] }}</td>
+      </ng-container>
+

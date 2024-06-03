@@ -5,6 +5,7 @@
   
   .logbook-table {
     width: 100%;
+    font-family: "Madimi One", sans-serif;
     border-collapse: collapse;
     border: 1px solid #0370ff;
     border-radius: 10px;
@@ -14,6 +15,7 @@
   .logbook-table th,
   .logbook-table td {
     padding: 8px;
+    font-family: "Madimi One", sans-serif;
     text-align: center;
     border: 1px solid #0370ff;
   }
@@ -24,19 +26,23 @@
   }
   
   .logbook-table tbody tr:nth-child(even) {
+    font-family: "Madimi One", sans-serif;
     background-color: #a6c8d3;
   }
   
   .logbook-table tbody tr:nth-child(odd) {
+    font-family: "Madimi One", sans-serif;
     background-color: #e0edff;
   }
   
   .logbook-table tbody td {
+    font-family: "Madimi One", sans-serif;
     color: black;
   }
   
   .logbook-table thead tr,
   .logbook-table tbody tr:last-child {
+    font-family: "Madimi One", sans-serif;
     border-bottom: 2px solid #0370ff;
   }
   
@@ -50,6 +56,7 @@
 
   .delete-button {
     background-color: #2898a7;
+    font-family: "Madimi One", sans-serif;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -60,6 +67,24 @@
   
   .delete-button:hover {
     background-color: #d32f2f;
+  }
+
+  .deleted-message {
+    font-size: 1rem;
+    font-family: "Madimi One", sans-serif;
+    color: navy;
+    text-align: center;   
+    display: none; /* Initially hide the message */
+    opacity: 1; /* Initially fully visible */
+    transition: opacity 1s ease;
+  }
+  
+.hidden {
+  opacity: 0; /* Fully transparent */
+  pointer-events: none; /* Disable pointer events to make it unclickable */
+}
+  .show {
+    display: block; /* Show the message */
   }
 
   .add-flight-btn {

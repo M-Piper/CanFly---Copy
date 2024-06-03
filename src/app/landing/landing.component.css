@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  margin-top: 50px;
 }
 
 .container {
@@ -34,6 +34,7 @@ body {
   justify-content: space-between;
   width: 80%;
   margin-bottom: 3rem;
+  
   font-family: "Madimi One", sans-serif;
 }
 
@@ -58,6 +59,12 @@ body {
 h2 {
   font-size: 2rem;
   color: #0A4054;
+  margin-left: 4rem;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #0A4054;
 }
 
 p {
@@ -66,10 +73,10 @@ p {
 }
 
 .pie-chart-placeholder {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background: lightgray;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background: rgb(221, 132, 132);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,7 +84,7 @@ p {
 
 .add-flight-btn {
   padding: 2rem 5rem;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "Madimi One", sans-serif;
   font-weight: 200;
   border: none;
