@@ -20,11 +20,8 @@
         </div>
         <div class="square square-orange">
             <h3>ATPL</h3>
-            <div class="pie-chart-container">
-                <canvas id="pieChart" width="400" height="400"></canvas>
-            </div>
-            <!-- <div class="pie-chart-placeholder">75% Complete</div> -->
-          <!----  <div style="width: 400px; height: 400px;">                <canvas id="pieChart" width="400" height="400"></canvas>            </div> -->
+            <p>Cross-Country: incomplete</p>
+            <p>{{ totalHours | number:'1.2-2' }}/1500 hours completed</p>
     </div>
     </div>
     <button class="add-flight-btn" routerLink="/add-flight">Add Flight</button>
