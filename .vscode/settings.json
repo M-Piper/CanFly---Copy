@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/bc80db15-8224-4583-bb3b-185a4142b05f/resourceGroups/CanFly_ResourceGroup/providers/Microsoft.Web/sites/CanFlyFrontend",
+    "appService.deploySubpath": "."
+}
