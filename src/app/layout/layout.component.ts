@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent {
+  isSidebarVisible = false;
 
+  toggleSidebar() {
+    this.isSidebarVisible = !this.isSidebarVisible;
+  }
+
+  closeSidebar() {
+    this.isSidebarVisible = false;
+  }
 }

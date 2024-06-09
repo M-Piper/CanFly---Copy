@@ -1,8 +1,14 @@
+
 <div class="button-header">
   <button class="delete-button" (click)="deleteLog()">Delete</button>
   <span class="error-message" *ngIf="showErrorMessage">Please make a valid selection</span>
   <div class="deleted-message" [class.show]="showDeletedMessage" id="deleted-message">Your entry has been deleted</div>
 </div>
+
+<div class="rotate-message" *ngIf="showRotateMessage">
+  Please rotate your device to landscape mode for a better experience.
+</div>
+
 
 <div></div>
 

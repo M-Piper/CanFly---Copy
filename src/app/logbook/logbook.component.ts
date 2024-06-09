@@ -12,6 +12,7 @@ export class LogbookComponent implements OnInit {
   selectedLogEntryID: number | null = null; // Change to store logEntryID instead of row index
   response: any;
   showErrorMessage: boolean = false;
+  showRotateMessage: boolean = false; //pop up used for small devices encouraging user to rotate
   showDeletedMessage: boolean = false;
   hiddenColumns: Set<string> = new Set<string>(); // Set to store hidden column keys
 
@@ -56,6 +57,12 @@ export class LogbookComponent implements OnInit {
 
   ngOnInit() {
     this.getLogs();
+    this.showRotateMessage = this.isSmallDevice();
+    if (this.showRotateMessage) {
+      setTimeout(() => {
+        this.showRotateMessage = false;
+      }, 2000);
+    }
   }
 
   getLogs() {
@@ -63,6 +70,10 @@ export class LogbookComponent implements OnInit {
       this.logEntries = data.map(entry => ({ ...entry, isSelected: false }));
       this.determineHiddenColumns(); //add to identify hidden columns
     });
+  }
+
+  isSmallDevice(): boolean {
+    return window.innerWidth <= 768; // Adjust this breakpoint as needed
   }
 
   getKeys(): string[] {
