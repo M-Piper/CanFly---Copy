@@ -1,16 +1,26 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* This makes sure padding does not affect the total width/height of an element */
+  box-sizing: border-box;
 }
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   margin-left: 4rem;
-  margin-right:4rem;
- /* background-color: #66B2B0;*/
+  margin-right: 4rem;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.main-menu {
+  display: flex;
 }
 
 nav ul {
@@ -28,19 +38,18 @@ nav ul li:last-child {
   margin-right: 0;
 }
 
-/*icon images*/
 nav ul li img {
   width: 4rem;
   height: 4rem;
-  display: block;   /* Treat image as block element */
-  margin: 0 auto;   /* Center the image */
+  display: block;
+  margin: 0 auto;
 }
 
 .logo img {
   width: auto;
   height: 15rem;
   margin: 0 auto;
-  margin-right:8rem;
+  margin-right: 8rem;
 }
 
 .menu {
@@ -50,19 +59,62 @@ nav ul li img {
   text-align: center;
   padding: 10px 20px;
   color: #0A4054;
-  text-decoration: none; /* Removing the underline */
+  text-decoration: none;
 }
-
 
 .menu:hover {
   color: #555;
 }
 
-
 .menu img {
-  margin-bottom: 10px;  /* Space between image and text */
+  margin-bottom: 10px;
 }
 
 nav ul li a:hover img {
   opacity: 0.7;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .main-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--lightgrey);
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .main-menu.visible {
+    display: flex;
+  }
+
+  .main-menu ul {
+    flex-direction: column;
+  }
+
+  .main-menu ul li {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .main-menu ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo img {
+    height: 10rem;
+    margin-right: 0;
+  }
 }
