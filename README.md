@@ -1,6 +1,8 @@
 # CanFly Flight Logging App
 The CanFly web application is designed specifically for Canadian pilots looking to log their hours. Particularly during the training phase, logging hours is important not only to fulfill legal requirements but also ensure that students can avoid overspending on costly flights. 
 This instance of the logging app is currently being used as a demo product to showcase the potential for this idea to be expanded into a full enterprise level software solution.
+The live demo is hosted on Azure DevOps and can be viewed here: https://ashy-desert-0cf93a21e.5.azurestaticapps.net/
+
 # Introduction 
 Development contributions are not being sought at this moment in time but the public is more than welcome to install and try out the demo project.
 # Installation
