@@ -11,4 +11,8 @@ export class LayoutComponent {
   toggleSidebar() {
     this.isSidebarVisible = !this.isSidebarVisible;
   }
+
+  closeSidebar() {
+    this.isSidebarVisible = false;
+  }
 }
