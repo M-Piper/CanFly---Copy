@@ -49,4 +49,4 @@ Add New Flight: Use the "Add Flight" feature to input details of a new flight, i
 Delete Logs: You can delete existing flight logs if needed.
 
 # API Documentation
-This project's backend utilizes a C# middleware, which interacts with a database using Swagger for API calls. The API endpoints are documented using Swagger, providing a comprehensive guide on how to interact with the backend services.
+This project's backend utilizes a C# middleware, which interacts with a database using Swagger for API calls. The API endpoints are documented using Swagger.
