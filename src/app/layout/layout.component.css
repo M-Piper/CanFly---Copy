@@ -87,13 +87,14 @@ nav ul li a:hover img {
   .main-menu {
     display: none;
     flex-direction: column;
-    width: 80%; /* Adjust width to fit nicely */
-    background-color: rgba(0, 123, 255, 0.2); /* Translucent light blue background */
+    width: 50%; /* Adjust width to be narrower */
+    background-color: #e0f7fa; /* Solid light blue background */
     position: absolute;
     top: 3.5rem;
     left: 0;
     z-index: 1000;
     padding: 1rem;
+    border-radius: 25px; /* Rounded corners */
   }
 
   .main-menu.visible {
@@ -102,6 +103,7 @@ nav ul li a:hover img {
 
   .main-menu ul {
     flex-direction: column;
+    align-items: center; /* Center icons in the column */
   }
 
   .main-menu ul li {
@@ -121,5 +123,20 @@ nav ul li a:hover img {
   .logo img {
     height: 10rem;
     margin-right: 0;
+  }
+  .rotate-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-family: "Madimi One", sans-serif;
+    font-size: 16px;
+    text-align: center;
   }
 }
