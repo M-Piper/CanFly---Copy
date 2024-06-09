@@ -38,7 +38,7 @@ In program.cs, update line 46 to use the URL for the frontend as used on your lo
 Replace "YOUR_FRONTEND_URL_HERE" with the URL for your frontend.
 
 # Usage
-This project is a web-based application built with Angular and TypeScript. It allows users to manage flight logs and view their aviation records. This demo version does not yet allow new users to log in and create accounts but the demo account for a student names “Sarah Demo” is hard coded into the scripts.
+This project is a web-based application built with Angular and TypeScript. It allows users to manage flight logs and view their aviation records. This demo version does not yet allow new users to log in and create accounts but the demo account for a student named “Sarah Demo” is hard coded into the scripts.
 
 Landing page: This page shows key information that would be useful at a glance to student or professional pilots. Some of the information is hard coded in as a placeholder example – notably the display box for ratings/licenses being worked toward. Other fields, such as total hours, are dynamically generated from the logbook.
 
