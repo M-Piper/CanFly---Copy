@@ -1,24 +1,24 @@
 :root {
-    --darkBlue: #0A4054;
-    --lightgrey: #E7E6E6;
-    --tealdark: #66B2B0;
-    --pinkdark: #F2494C;
-    --pinklight: #F39891;
-    --orangedark: #F9AA18;
-    --orangelight: #F9C996;
-    --teallight: #9FD1D0;
-    --backgroundTeal: #CEE8E7;
-    --backgroundPink: #FCD8D9;
-    --backgroundBlue: #D9F2FB;
-    --brightblue: #0563C1;
-    --white: #FFFF;
-  }
+  --darkBlue: #0A4054;
+  --lightgrey: #E7E6E6;
+  --tealdark: #66B2B0;
+  --pinkdark: #F2494C;
+  --pinklight: #F39891;
+  --orangedark: #F9AA18;
+  --orangelight: #F9C996;
+  --teallight: #9FD1D0;
+  --backgroundTeal: #CEE8E7;
+  --backgroundPink: #FCD8D9;
+  --backgroundBlue: #D9F2FB;
+  --brightblue: #0563C1;
+  --white: #FFFF;
+}
 
-  .madimi-one-regular {
-    font-family: "Madimi One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+.madimi-one-regular {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
   font-family: "Madimi One", sans-serif;
@@ -34,7 +34,6 @@ body {
   justify-content: space-between;
   width: 80%;
   margin-bottom: 3rem;
-  
   font-family: "Madimi One", sans-serif;
 }
 
@@ -100,33 +99,33 @@ p {
 }
 
 .landing-page {
-  position: absolute; 
-  top: 13rem;          /* Offset from the top */
-  left: 2rem;        /* Offset from the right */
-  padding: 5px 10px;  /* Some padding for aesthetics */
+  position: absolute;
+  top: 13rem; /* Offset from the top */
+  left: 2rem; /* Offset from the right */
+  padding: 5px 10px; /* Some padding for aesthetics */
   border-radius: 5px; /* Optional: Curved edges */
 }
 
 .square {
-  border-radius: 35px; 
+  border-radius: 35px;
 }
 
 .square-teal {
   background-color: #8cadac;
-  border: 3px solid #4A8A8D; 
-  color: var(--white); 
+  border: 3px solid #4A8A8D;
+  color: var(--white);
 }
 
 .square-pink {
   background-color: #c1b5e4;
-  border: 3px solid #2b263a; 
-  color: var(--darkBlue); 
+  border: 3px solid #2b263a;
+  color: var(--darkBlue);
 }
 
 .square-orange {
   background-color: #c3c6d1;
-  border: 3px solid #4b4c6b; 
-  color: var(--white);  
+  border: 3px solid #4b4c6b;
+  color: var(--white);
 }
 
 .pie-chart-container {
@@ -135,4 +134,42 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  h2 {
+      font-size: 1.5rem;
+      margin-left: 2rem;
+  }
+
+  h3 {
+      font-size: 1.5rem;
+  }
+
+  p {
+      font-size: 1.2rem;
+  }
+
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .square {
+      width: 90%;
+      height: auto;
+      margin-bottom: 1rem;
+      padding: 1rem;
+  }
+
+  .add-flight-btn {
+      padding: 1rem 3rem;
+      font-size: 1.5rem;
+  }
+
+  .landing-page {
+      top: 10rem;
+      left: 1rem;
+  }
 }
