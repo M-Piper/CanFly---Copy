@@ -123,6 +123,7 @@ nav ul li a:hover img {
   .logo img {
     height: 10rem;
     margin-right: 0;
+    padding-left: -1 rem;
   }
   .rotate-message {
     position: fixed;
@@ -139,9 +140,4 @@ nav ul li a:hover img {
     font-size: 16px;
     text-align: center;
   }
-
-  @media (max-width: 768px) {
-    .logo {
-      padding-left: 1rem; /* Adjust padding-left for smaller devices */
-    }
 }
