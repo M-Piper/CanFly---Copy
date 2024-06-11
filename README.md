@@ -49,4 +49,5 @@ Add New Flight: Use the "Add Flight" feature to input details of a new flight, i
 Delete Logs: You can delete existing flight logs if needed.
 
 # API Documentation
-This project's backend utilizes a C# middleware, which interacts with a database using Swagger for API calls. The API endpoints are documented using Swagger.
+This project's backend utilizes a C# middleware, which uses REST APIs that are documented using Swagger. 
+Endpoints for the demo version's backend can be found here:  https://canfly-backend.azurewebsites.net/swagger/index.html
