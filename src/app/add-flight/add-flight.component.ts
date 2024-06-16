@@ -48,9 +48,9 @@ export class AddFlightComponent implements OnInit {
       multiEngineNightSICTime: [null],
 
       // Instrument fields
-      instrumentIMC: [null],
-      instrumentHood: [null],
-      instrumentFTD: [null],
+      instrumentActualTime: [null],
+      instrumentHoodTime: [null],
+      instrumentSimulatorDualTime: [null],
       instrumentApproachesCount: [null],
 
       // Cross Country fields
@@ -63,9 +63,9 @@ export class AddFlightComponent implements OnInit {
       routeVia: [null],
       routeTo: [null],
 
-      dualInstructionGivenNotes: [null],
-      floatTimeNotes: [null],
-      VFRSimulatorNotes: [null],
+      dualInstructionGivenTime: [null],
+      floatTime: [null],
+      VFRSimulatorDualTime: [null],
       CAF: [null],
       takeOffs: [null],
       landings: [null],
