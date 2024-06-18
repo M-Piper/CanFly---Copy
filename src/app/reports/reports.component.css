@@ -4,8 +4,20 @@
   font-family: "Madimi One", sans-serif;
 }
 
-.ratings-box, .medical-box, .other-box {
-  background-color: rgba(211, 211, 211, 0.2); /* Light transparent color */
+.ratings-box {
+  background-color: rgb(242, 210, 250); /* Light transparent color */
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+}
+.medical-box {
+  background-color: rgba(115, 245, 212, 0.986); /* Light transparent color */
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+}
+.other-box {
+  background-color: rgba(252, 253, 207, 0.952); /* Light transparent color */
   margin: 10px 0;
   padding: 15px;
   border-radius: 10px;
