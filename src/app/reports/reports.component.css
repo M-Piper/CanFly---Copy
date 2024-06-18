@@ -1,0 +1,31 @@
+.reports-container {
+  margin: 20px auto;
+  max-width: 90%;
+  font-family: "Madimi One", sans-serif;
+}
+
+.ratings-box, .medical-box, .other-box {
+  background-color: rgba(211, 211, 211, 0.2); /* Light transparent color */
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.ratings-box h3, .medical-box h3, .other-box h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.rating-items, .medical-items, .other-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rating-item, .medical-item, .other-item {
+  flex: 0 0 50%; /* Two items per row */
+  padding: 5px 10px;
+}
+
+.other-box {
+  border: 1px solid #ccc; /* Gray border for other-box */
+}

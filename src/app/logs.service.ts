@@ -10,11 +10,12 @@ export interface pilotName {
   FullName: string;
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class LogsService {
-  //private readonly APIUrl = "http://localhost:5117/api/CanFly/";
+//  private readonly APIUrl = "http://localhost:5117/api/CanFly/";
   private readonly APIUrl = "https://canfly-backend.azurewebsites.net/api/CanFly/";
   
   constructor(private http: HttpClient) { }
@@ -44,4 +45,8 @@ export class LogsService {
     return this.http.get<pilotName>(this.APIUrl + 'GetName');
   }
 
+  getPilotReport(): Observable<any> {
+    return this.http.get(this.APIUrl + 'GetPilotReport');
+  }
+  
 }

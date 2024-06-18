@@ -1,0 +1,30 @@
+<div class="reports-container">
+  <ng-container *ngFor="let entry of reportData">
+    <div *ngIf="entry">
+      <div *ngIf="entry.DisplayName === 'Rating'" class="ratings-box">
+        <h3>{{ entry.DisplayName }}</h3>
+        <div class="rating-items">
+          <div *ngFor="let key of getObjectKeys(entry)" class="rating-item">
+            <span>{{ entry[key] }}</span>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="entry.DisplayName === 'Medical'" class="medical-box">
+        <h3>{{ entry.DisplayName }}</h3>
+        <div class="medical-items">
+          <div *ngFor="let key of getObjectKeys(entry)" class="medical-item">
+            <span>{{ entry[key] }}</span>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="entry.DisplayName !== 'Rating' && entry.DisplayName !== 'Medical'" class="other-box">
+        <h3>{{ entry.DisplayName }}</h3>
+        <div class="other-items">
+          <div *ngFor="let key of getObjectKeys(entry)" class="other-item">
+            <span>{{ entry[key] }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -8,6 +8,8 @@ import { LandingComponent } from './landing/landing.component';
 import { AddFlightComponent } from './add-flight/add-flight.component';
 import { LogbookComponent } from './logbook/logbook.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common'; 
+import { ReportsComponent } from './reports/reports.component';
 
 @NgModule({
 
@@ -16,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LayoutComponent,
     LandingComponent,
     AddFlightComponent,
-    LogbookComponent
+    LogbookComponent,
+    ReportsComponent
   ],
   
   imports: [
@@ -24,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   //exports: [FormsModule, ReactiveFormsModule],
   providers: [],
