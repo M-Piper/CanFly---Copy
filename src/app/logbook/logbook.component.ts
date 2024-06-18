@@ -34,7 +34,7 @@ export class LogbookComponent implements OnInit {
     'multiEngineNightDualTime' : 'Multi Night Dual',
     'multiEngineNightPICTime' : 'Multi Night PIC',
     'multiEngineNightSICTime' : 'Multi Night SIC',
-    'instrumentActualTime' : 'Instrument',
+    'instrumentActualTime' : 'Instrument Actual',
     'instrumentHoodTime' : 'Instrument with Hood',
     'instrumentSimulatorDualTime' : 'Instrument FTD',
     'instrumentApproachesCount' : 'Instrument Approaches',
