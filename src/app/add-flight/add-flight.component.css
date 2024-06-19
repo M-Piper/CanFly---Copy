@@ -98,6 +98,12 @@ label {
     width: 100%;
 }
 
+.show-message {
+    font-family: "Madimi One", sans-serif;
+    font-size: 1.5rem;
+    color: #135218;
+}
+
 /*
 #submitButton {
     background-color:#F2494C;

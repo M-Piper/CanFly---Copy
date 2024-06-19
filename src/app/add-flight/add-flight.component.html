@@ -3,6 +3,7 @@
  <!-- Button row -->
  <div class="row">
     <div class="field-group">
+      <span class="show-message" *ngIf="showMessage">New entry has been added</span>
       <button id="submitButton" type="submit">Submit</button> <!--submit button-->
     </div>
     <div class="field-group"> <!-- Dropdown for Type -->
@@ -42,8 +43,6 @@
         </select>
       </div>
   </div>
-
-<span class="show-message" *ngIf="showMessage">New entry has been added</span>
 
 <!-- Row 1 -->
 <div class="row">
@@ -100,19 +99,19 @@
    <div class="row">
     <div class="field-group">
         <label for="SingleEngineDayDualTime">Single Engine Day Dual Time:</label>
-        <input type="number" id="singleEngineDayDualTime" formControlName="singleEngineDayDualTime">
+        <input type="number" step="0.1" id="singleEngineDayDualTime" formControlName="singleEngineDayDualTime">
     </div>
     <div class="field-group">
         <label for="SingleEngineNightDualTime">Single Engine Night Dual Time:</label>
-        <input type="number" id="singleEngineNightDualTime" formControlName="singleEngineNightDualTime">
+        <input type="number" step="0.1" id="singleEngineNightDualTime" formControlName="singleEngineNightDualTime">
     </div>
     <div class="field-group">
         <label for="SingleEngineDayPICTime">Single Engine Day PIC Time:</label>
-        <input type="number" id="singleEngineDayPICTime" formControlName="singleEngineDayPICTime">
+        <input type="number" step="0.1" id="singleEngineDayPICTime" formControlName="singleEngineDayPICTime">
     </div>
     <div class="field-group">
         <label for="SingleEngineNightPICTime">Single Engine Night PIC Time:</label>
-        <input type="number" id="singleEngineNightPICTime" formControlName="singleEngineNightPICTime">
+        <input type="number" step="0.1" id="singleEngineNightPICTime" formControlName="singleEngineNightPICTime">
     </div>
 </div>
 </div>
@@ -122,27 +121,27 @@
    <div class="row">
     <div class="field-group">
         <label for="MultiEngineDayDualTime">Multi Engine Day Dual Time:</label>
-        <input type="number" id="multiEngineDayDualTime" formControlName="multiEngineDayDualTime">
+        <input type="number" step="0.1" id="multiEngineDayDualTime" formControlName="multiEngineDayDualTime">
     </div>
     <div class="field-group">
         <label for="MultiEngineNightDualTime">Multi Engine Night Dual Time:</label>
-        <input type="number" id="multiEngineNightDualTime" formControlName="multiEngineNightDualTime">
+        <input type="number" step="0.1" id="multiEngineNightDualTime" formControlName="multiEngineNightDualTime">
     </div>
     <div class="field-group">
         <label for="MultiEngineDayPICTime">Multi Engine Day PIC Time:</label>
-        <input type="number" id="multiEngineDayPICTime" formControlName="multiEngineDayPICTime">
+        <input type="number" step="0.1" id="multiEngineDayPICTime" formControlName="multiEngineDayPICTime">
     </div>
     <div class="field-group">
         <label for="MultiEngineDaySICTime">Multi Engine Day SIC Time:</label>
-        <input type="number" id="multiEngineDaySICTime" formControlName="multiEngineDaySICTime">
+        <input type="number" step="0.1" id="multiEngineDaySICTime" formControlName="multiEngineDaySICTime">
     </div>
     <div class="field-group">
         <label for="MultiEngineNightPICTime">Multi Engine Night PIC Time:</label>
-        <input type="number" id="multiEngineNightPICTime" formControlName="multiEngineNightPICTime">
+        <input type="number" step="0.1" id="multiEngineNightPICTime" formControlName="multiEngineNightPICTime">
     </div>
     <div class="field-group">
         <label for="MultiEngineNightSICTime">Multi Engine Night SIC Time:</label>
-        <input type="number" id="multiEngineNightSICTime" formControlName="multiEngineNightSICTime">
+        <input type="number" step="0.1" id="multiEngineNightSICTime" formControlName="multiEngineNightSICTime">
     </div>
 </div>
 </div>
@@ -151,20 +150,20 @@
     <div *ngIf="displayInstrument">
     <div class="row">
     <div class="field-group">
-        <label for="InstrumentIMC">Instrument IMC:</label>
-        <input type="number" id="instrumentIMC" formControlName="instrumentIMC">
+        <label for="InstrumentActualTime">Instrument Actual Time:</label>
+        <input type="number" step="0.1" id="instrumentActualTime" formControlName="instrumentActualTime">
     </div>
     <div class="field-group">
-        <label for="InstrumentHood">Instrument Hood:</label>
-        <input type="number" id="instrumentHood" formControlName="instrumentHood">
+        <label for="InstrumentHoodTime">Instrument Hood Time:</label>
+        <input type="number" step="0.1" id="instrumentHoodTime" formControlName="instrumentHoodTime">
     </div>
     <div class="field-group">
-        <label for="InstrumentFTD">Instrument FTD:</label>
-        <input type="number" id="instrumentFTD" formControlName="instrumentFTD">
+        <label for="Instrument">InstrumentSimulatorDualTime:</label>
+        <input type="number" step="0.1" id="instrumentSimulatorDualTime" formControlName="instrumentSimulatorDualTime">
     </div>
     <div class="field-group">
         <label for="InstrumentApproachesCount">Instrument Approaches Count:</label>
-        <input type="number" id="instrumentApproachesCount" formControlName="instrumentApproachesCount">
+        <input type="number" step="0.1" id="instrumentApproachesCount" formControlName="instrumentApproachesCount">
     </div>
 </div>
 </div>
@@ -175,19 +174,19 @@
  <div class="row">
         <div class="field-group">
             <label for="CrossCountryDayDualTime">Cross Country Day Dual Time:</label>
-            <input type="number" id="crossCountryDayDualTime" formControlName="crossCountryDayDualTime">
+            <input type="number" step="0.1" id="crossCountryDayDualTime" formControlName="crossCountryDayDualTime">
         </div>
         <div class="field-group">
             <label for="CrossCountryNightDualTime">Cross Country Night Dual Time:</label>
-            <input type="number" id="crossCountryNightDualTime" formControlName="crossCountryNightDualTime">
+            <input type="number" step="0.1" id="crossCountryNightDualTime" formControlName="crossCountryNightDualTime">
         </div>
         <div class="field-group">
             <label for="CrossCountryDayPICTime">Cross Country Day PIC Time:</label>
-            <input type="number" id="crossCountryDayPICTime" formControlName="crossCountryDayPICTime">
+            <input type="number" step="0.1" id="crossCountryDayPICTime" formControlName="crossCountryDayPICTime">
         </div>
         <div class="field-group">
             <label for="CrossCountryNightPICTime">Cross Country Night PIC Time:</label>
-            <input type="number" id="crossCountryNightPICTime" formControlName="crossCountryNightPICTime">
+            <input type="number" step="0.1" id="crossCountryNightPICTime" formControlName="crossCountryNightPICTime">
         </div>
 </div>
 </div>
@@ -204,23 +203,23 @@
     
 </div>
 <!-- Dual Instruction Given Notes -->
-<div *ngIf="selectedNoteType === 'DualInstructionGivenNotes'">
+<div *ngIf="selectedNoteType === 'DualInstructionGivenTime'">
     <div class="row">
     <div class="field-group">
-    <label for="DualInstructionGivenNotes">Dual Instruction Given Notes:</label>
-    <input type="text" id="dualInstructionGivenNotes" formControlName="dualInstructionGivenNotes">
+    <label for="DualInstructionGivenTime">Dual Instruction Given Time:</label>
+    <input type="number" step="0.1" id="dualInstructionGivenTime" formControlName="dualInstructionGivenTime">
     </div>
     <div class="field-group"></div>
     <div class="field-group"></div>
 </div>
 </div>
 
-<!-- Float Time Notes -->
-<div *ngIf="selectedNoteType === 'FloatTimeNotes'">
+<!-- Float Time -->
+<div *ngIf="selectedNoteType === 'FloatTime'">
     <div class="row">
         <div class="field-group">    
-    <label for="FloatTimeNotes">Float Time Notes:</label>
-    <input type="text" id="floatTimeNotes" formControlName="floatTimeNotes">
+    <label for="FloatTime">Float Time:</label>
+    <input type="number" step="0.1" id="floatTime" formControlName="floatTime">
 </div>
 <div class="field-group"></div>
 <div class="field-group"></div>
@@ -228,11 +227,11 @@
 </div>
 
 <!-- VFR Simulator Notes -->
-<div *ngIf="selectedNoteType === 'VFRSimulatorNotes'">
+<div *ngIf="selectedNoteType === 'VFRSimulatorDualTime'">
     <div class="row">
         <div class="field-group">    
-    <label for="VFRSimulatorNotes">VFR Simulator Notes:</label>
-    <input type="text" id="VFRSimulatorNotes" formControlName="VFRSimulatorNotes">
+    <label for="VFRSimulatorDualTime">VFR Simulator Dual Time:</label>
+    <input type="number" step="0.1" id="VFRSimulatorDualTime" formControlName="VFRSimulatorDualTime">
 </div>
 <div class="field-group"></div>
 <div class="field-group"></div>
@@ -244,27 +243,27 @@
     <div class="row">
      <div class="field-group">
          <label for="MultiEngineDayDualTime">Multi Engine Day Dual Time:</label>
-         <input type="number" id="multiEngineDayDualTime" formControlName="multiEngineDayDualTime">
+         <input type="number" step="0.1" id="multiEngineDayDualTime" formControlName="multiEngineDayDualTime">
      </div>
      <div class="field-group">
          <label for="MultiEngineNightDualTime">Multi Engine Night Dual Time:</label>
-         <input type="number" id="multiEngineNightDualTime" formControlName="multiEngineNightDualTime">
+         <input type="number" step="0.1" id="multiEngineNightDualTime" formControlName="multiEngineNightDualTime">
      </div>
      <div class="field-group">
          <label for="MultiEngineDayPICTime">Multi Engine Day PIC Time:</label>
-         <input type="number" id="multiEngineDayPICTime" formControlName="multiEngineDayPICTime">
+         <input type="number" step="0.1" id="multiEngineDayPICTime" formControlName="multiEngineDayPICTime">
      </div>
      <div class="field-group">
          <label for="MultiEngineDaySICTime">Multi Engine Day SIC Time:</label>
-         <input type="number" id="multiEngineDaySICTime" formControlName="multiEngineDaySICTime">
+         <input type="number" step="0.1" id="multiEngineDaySICTime" formControlName="multiEngineDaySICTime">
      </div>
      <div class="field-group">
          <label for="MultiEngineNightPICTime">Multi Engine Night PIC Time:</label>
-         <input type="number" id="multiEngineNightPICTime" formControlName="multiEngineNightPICTime">
+         <input type="number" step="0.1" id="multiEngineNightPICTime" formControlName="multiEngineNightPICTime">
      </div>
      <div class="field-group">
          <label for="MultiEngineNightSICTime">Multi Engine Night SIC Time:</label>
-         <input type="number" id="multiEngineNightSICTime" formControlName="multiEngineNightSICTime">
+         <input type="number" step="0.1" id="multiEngineNightSICTime" formControlName="multiEngineNightSICTime">
      </div>
  </div>
  </div>
