@@ -58,6 +58,7 @@ export class AddFlightComponent implements OnInit {
       crossCountryDayPICTime: [null],
       crossCountryNightDualTime: [null],
       crossCountryNightPICTime: [null],
+      crossCountryDistance: [null],
 
       routeFrom: [null],
       routeVia: [null],

@@ -29,6 +29,7 @@ export interface Flight extends IObjectKeys{
     CrossCountryDayPICTime?: number;
     CrossCountryNightDualTime?: number;
     CrossCountryNightPICTime?: number;
+    CrossCountryDistance?: number;
     RouteFrom?: string;
     RouteVia?: string;
     RouteTo?: string;

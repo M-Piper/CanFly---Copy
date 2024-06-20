@@ -42,6 +42,7 @@ export class LogbookComponent implements OnInit {
     'crossCountryDayPICTime' : 'X-Country Day PIC',
     'crossCountryNightDualTime' : 'X-Country Night Dual',
     'crossCountryNightPICTime' : 'X-Country Night PIC',
+    'crossCountryDistance' : 'X-Country Distance',
     'routeFrom' : 'From',
     'routeVia' : 'Via',
     'routeTo' : 'To',
