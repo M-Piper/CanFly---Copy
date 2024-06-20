@@ -4,9 +4,11 @@
     <h3>Ratings, Licenses, and Permits</h3>
     <div class="rating-items">
       <div *ngFor="let entry of ratingReports" class="rating-item">
-        <div *ngFor="let key of getObjectKeys(entry)">
-          <ng-container *ngIf="key !== 'displayName'"> <!-- Skip displayName key -->
-            <span>{{ entry[key] }}</span>
+        <div class="inline-container">
+          <ng-container *ngFor="let key of getObjectKeys(entry)">
+            <ng-container *ngIf="key !== 'displayName'"> <!-- Skip displayName key -->
+              <span>{{ entry[key] }}</span>
+            </ng-container>
           </ng-container>
         </div>
       </div>
@@ -18,9 +20,11 @@
     <h3>Medical</h3>
     <div class="medical-items">
       <div *ngFor="let entry of medicalReports" class="medical-item">
-        <div *ngFor="let key of getObjectKeys(entry)">
-          <ng-container *ngIf="key !== 'displayName'"> <!-- Skip displayName key -->
-            <span>{{ entry[key] }}</span>
+        <div class="inline-container">
+          <ng-container *ngFor="let key of getObjectKeys(entry)">
+            <ng-container *ngIf="key !== 'displayName'"> <!-- Skip displayName key -->
+              <span>{{ entry[key] }}</span>
+            </ng-container>
           </ng-container>
         </div>
       </div>
@@ -32,8 +36,10 @@
     <h3>Totals</h3>
     <div class="other-items">
       <div *ngFor="let entry of otherReports" class="other-item">
-        <div *ngFor="let key of getObjectKeys(entry)">
-          <span>{{ entry[key] }}</span>
+        <div class="inline-container">
+          <ng-container *ngFor="let key of getObjectKeys(entry)">
+            <span>{{ entry[key] }}</span>
+          </ng-container>
         </div>
       </div>
     </div>

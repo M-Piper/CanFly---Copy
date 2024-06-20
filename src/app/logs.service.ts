@@ -15,7 +15,7 @@ export interface pilotName {
   providedIn: 'root'
 })
 export class LogsService {
-//  private readonly APIUrl = "http://localhost:5117/api/CanFly/";
+ //private readonly APIUrl = "http://localhost:5117/api/CanFly/";
   private readonly APIUrl = "https://canfly-backend.azurewebsites.net/api/CanFly/";
   
   constructor(private http: HttpClient) { }

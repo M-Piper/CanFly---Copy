@@ -10,17 +10,20 @@
   padding: 15px;
   border-radius: 10px;
 }
+
 .medical-box {
   background-color: rgba(115, 245, 212, 0.986); /* Light transparent color */
   margin: 10px 0;
   padding: 15px;
   border-radius: 10px;
 }
+
 .other-box {
   background-color: rgba(252, 253, 207, 0.952); /* Light transparent color */
   margin: 10px 0;
   padding: 15px;
   border-radius: 10px;
+  border: 1px solid #ccc; /* Gray border for other-box */
 }
 
 .ratings-box h3, .medical-box h3, .other-box h3 {
@@ -38,6 +41,12 @@
   padding: 5px 10px;
 }
 
-.other-box {
-  border: 1px solid #ccc; /* Gray border for other-box */
+.inline-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inline-container span {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between spans as needed */
 }
