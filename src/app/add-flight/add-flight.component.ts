@@ -73,8 +73,7 @@ export class AddFlightComponent implements OnInit {
       omitFromReports: [null],
       untetheredBalloon: [null],
       altitudeBalloon: [null],
-      outsideCanada: [null],
-      instrumentGroundOptional: [null],
+      outsideCanada: [null],      
       launchLocationGlider: [null],
       distanceGlider: [null],
       launchTypeGlider: [null]

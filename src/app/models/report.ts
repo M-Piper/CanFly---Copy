@@ -20,6 +20,9 @@ interface IObjectKeys {
     NightNoInstrument? : number;
     TotalInstrument? : number;
     TotalCrossCountry? : number;
+    TotalSim? : number;
+    TotalInstrumentSim? : number;
+    TotalVFRSim? : number;
     Total30Days? : number;
     TotalLast90Days? : number;
     TotalLast6Months? : number;
