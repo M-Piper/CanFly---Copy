@@ -48,9 +48,9 @@ export class AddFlightComponent implements OnInit {
       multiEngineNightSICTime: [null],
 
       // Instrument fields
-      instrumentIMC: [null],
-      instrumentHood: [null],
-      instrumentFTD: [null],
+      instrumentActualTime: [null],
+      instrumentHoodTime: [null],
+      instrumentSimulatorDualTime: [null],
       instrumentApproachesCount: [null],
 
       // Cross Country fields
@@ -58,14 +58,15 @@ export class AddFlightComponent implements OnInit {
       crossCountryDayPICTime: [null],
       crossCountryNightDualTime: [null],
       crossCountryNightPICTime: [null],
+      crossCountryDistance: [null],
 
       routeFrom: [null],
       routeVia: [null],
       routeTo: [null],
 
-      dualInstructionGivenNotes: [null],
-      floatTimeNotes: [null],
-      VFRSimulatorNotes: [null],
+      dualInstructionGivenTime: [null],
+      floatTime: [null],
+      VFRSimulatorDualTime: [null],
       CAF: [null],
       takeOffs: [null],
       landings: [null],
@@ -73,8 +74,7 @@ export class AddFlightComponent implements OnInit {
       omitFromReports: [null],
       untetheredBalloon: [null],
       altitudeBalloon: [null],
-      outsideCanada: [null],
-      instrumentGroundOptional: [null],
+      outsideCanada: [null],      
       launchLocationGlider: [null],
       distanceGlider: [null],
       launchTypeGlider: [null]

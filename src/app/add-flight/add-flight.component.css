@@ -98,6 +98,22 @@ label {
     width: 100%;
 }
 
+.show-message {
+    font-family: "Madimi One", sans-serif;
+    font-size: 1.5rem;
+    color: #135218;
+}
+
+.added-message {
+    font-size: 1rem;
+    font-family: "Madimi One", sans-serif;
+    color: navy;
+    text-align: center;   
+    display: none; /* Initially hide the message */
+    opacity: 1; /* Initially fully visible */
+    transition: opacity 1s ease;
+  }
+
 /*
 #submitButton {
     background-color:#F2494C;

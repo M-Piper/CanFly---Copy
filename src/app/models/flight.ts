@@ -21,20 +21,21 @@ export interface Flight extends IObjectKeys{
     MultiEngineNightDualTime?: number;
     MultiEngineNightPICTime?: number;
     MultiEngineNightSICTime?: number;
-    InstrumentIMC?: number;
-    InstrumentHood?: number;
-    InstrumentFTD?: number;
+    InstrumentActualTime?: number;
+    InstrumentHoodTime?: number;
+    InstrumentSimulatorDualTime?: number;
     InstrumentApproachesCount?: number;
     CrossCountryDayDualTime?: number;
     CrossCountryDayPICTime?: number;
     CrossCountryNightDualTime?: number;
     CrossCountryNightPICTime?: number;
+    CrossCountryDistance?: number;
     RouteFrom?: string;
     RouteVia?: string;
     RouteTo?: string;
-    DualInstructionGivenNotes?: string;
-    FloatTimeNotes?: string;
-    VFRSimulatorNotes?: string;
+    DualInstructionGivenTime?: number;
+    FloatTime?: number;
+    VFRSimulatorDualTime?: number;
     isSelected?: boolean;
   }
   
