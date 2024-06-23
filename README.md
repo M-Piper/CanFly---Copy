@@ -38,7 +38,7 @@ In program.cs, update line 46 to use the URL for the frontend as used on your lo
 Replace "YOUR_FRONTEND_URL_HERE" with the URL for your frontend.
 
 # Usage
-This project is a web-based application built with Angular and TypeScript. It allows users to manage flight logs and view their aviation records. This demo version does not yet allow new users to log in and create accounts but the demo account for a student names “Sarah Demo” is hard coded into the scripts.
+This project is a web-based application built with Angular and TypeScript. It allows users to manage flight logs and view their aviation records. This demo version does not yet allow new users to log in and create accounts but the demo account for a student named “Sarah Demo” is hard coded into the scripts.
 
 Landing page: This page shows key information that would be useful at a glance to student or professional pilots. Some of the information is hard coded in as a placeholder example – notably the display box for ratings/licenses being worked toward. Other fields, such as total hours, are dynamically generated from the logbook.
 
@@ -49,4 +49,5 @@ Add New Flight: Use the "Add Flight" feature to input details of a new flight, i
 Delete Logs: You can delete existing flight logs if needed.
 
 # API Documentation
-This project's backend utilizes a C# middleware, which interacts with a database using Swagger for API calls. The API endpoints are documented using Swagger, providing a comprehensive guide on how to interact with the backend services.
+This project's backend utilizes a C# middleware, which uses REST APIs that are documented using Swagger. 
+Endpoints for the demo version's backend can be found here:  https://canfly-backend.azurewebsites.net/swagger/index.html
