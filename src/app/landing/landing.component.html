@@ -4,26 +4,31 @@
     </div>
     <div class="container">
         <div class="square square-teal">
-            <h3>Current Licences</h3>
-            <p>PPL, CPL, IFR, FLOAT</p>
-            <div class="bottom-text">
-                <p>Upcoming Expiries</p>
-                <p>Medical Testing: 23/11/08</p>
+            <h3>Current Ratings, Licences, & Permits</h3>
+            <div *ngFor="let rating of completedRatings">
+                <p class = "displayName">{{ rating.LongName }}</p> <p>{{ rating.DateAwarded | date:'shortDate' }}</p>
             </div>
+                <p class="displayName">Upcoming Expiries: </p>
+                <p>Medical Certificate: 24/11/08</p>
+ 
         </div>
         <div class="square square-pink">
-            <h3>Hours</h3>
-            <p>Total:  {{ totalHours | number:'1.2-2' }}</p>
-            <div class="bottom-text">
-                <p>Pilot-In-Command: {{pilotFullname}}</p>
-            </div>
+            <h3>Total Hours</h3>
+            <p class="displayName">Pilot-In-Command: </p>
+            <p>{{pilotFullname}}</p>
+            <p class="displayName">Total Hours (excluding sim): </p>
+            <p>{{ totalHours | number:'1.2-2' }}</p>
         </div>
         <div class="square square-orange">
-            <h3>ATPL</h3>
-            <p>Cross-Country: incomplete</p>
-            <p>{{ totalHours | number:'1.2-2' }}/1500 hours completed</p>
-    </div>
+            <h3>PPL (in-progress)</h3>
+            <div class="requirements">
+                <div class="requirement" *ngFor="let req of requirementData">
+                    <p class = "displayName">{{ req.displayName }}</p>
+                    <p>{{ req.HoursStatus }}</p>
+                    <p>{{ req.CrossCountryStatus }}</p>
+                </div>
+            </div>
+        </div>
     </div>
     <button class="add-flight-btn" routerLink="/add-flight">Add Flight</button>
-    </body>
-    
+</body>

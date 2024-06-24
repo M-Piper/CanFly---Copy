@@ -1,0 +1,28 @@
+<div class="profile-container">
+  <h1>Profile Details</h1>
+  <div class="profile-details" *ngIf="profileData.length > 0">
+    <div class="detail">
+      <p><strong>Full Name:</strong></p>
+      <p>{{ profileData[0].firstName }} {{ profileData[0].lastName }}</p>
+    </div>
+    <div class="detail">
+      <p><strong>Email:</strong></p>
+      <p>{{ profileData[0].email }}</p>
+    </div>
+    <div class="detail">
+      <p><strong>Phone:</strong></p>
+      <p>{{ profileData[0].phone }}</p>
+    </div>
+    <div class="detail">
+      <p><strong>Address:</strong></p>
+      <p>{{ profileData[0].streetAddress }}, {{ profileData[0].city }}, {{ profileData[0].province }}</p>
+    </div>
+    <div class="detail">
+      <p><strong>Date of Birth:</strong></p>
+      <p>{{ profileData[0].dob | date:'shortDate' }}</p>
+    </div>
+  </div>
+  <div class="loading" *ngIf="profileData.length === 0">
+    <p>Loading profile information...</p>
+  </div>
+</div>

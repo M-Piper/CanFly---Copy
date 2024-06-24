@@ -39,46 +39,39 @@ body {
 
 .square {
   flex: 1;
-  height: 300px;
-  margin: 0 1%;
+  margin: 0 .5%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 2% 0;
+  justify-content: flex-start;
+  padding: 1%;
+  border-radius: 35px;
+  box-sizing: border-box;
 }
 
 .bottom-text {
   text-align: center;
   margin-top: auto;
-  padding: 2% 0;
+  padding: 0.5% 0;
   font-family: "Madimi One", sans-serif;
 }
 
 h2 {
   font-size: 2rem;
   color: #0A4054;
-  margin-left: 4rem;
+  margin-left: 2rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #0A4054;
+  margin-bottom: 0.5rem;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #0A4054;
-}
-
-.pie-chart-placeholder {
-  height: 200px;
-  width: 200px;
-  border-radius: 100px;
-  background: rgb(221, 132, 132);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0.2rem 0;
 }
 
 .add-flight-btn {
@@ -106,10 +99,6 @@ p {
   border-radius: 5px; /* Optional: Curved edges */
 }
 
-.square {
-  border-radius: 35px;
-}
-
 .square-teal {
   background-color: #8cadac;
   border: 3px solid #4A8A8D;
@@ -117,15 +106,34 @@ p {
 }
 
 .square-pink {
-  background-color: #c1b5e4;
-  border: 3px solid #2b263a;
+  background-color: #d4cdeb;
+  border: 3px solid #746992;
   color: var(--darkBlue);
 }
 
 .square-orange {
   background-color: #c3c6d1;
-  border: 3px solid #4b4c6b;
+  border: 3px solid #77788a;
   color: var(--white);
+}
+
+.requirements {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.requirement {
+  flex: 1 1 48%; /* Two items per row */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.requirement:nth-child(odd) {
+  margin-right: 1%; /* Adding right margin to the first column */
 }
 
 .pie-chart-container {
@@ -136,19 +144,24 @@ p {
   justify-content: center;
 }
 
+.displayName {
+  font-weight: bold; /* Making the display name bold */
+  text-decoration: underline; /* Adding underline to the display name */
+}
+
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
   h2 {
-      font-size: 1.5rem;
-      margin-left: 2rem;
+      font-size: 1rem;
+      margin-left: .5rem;
   }
 
   h3 {
-      font-size: 1.5rem;
+      font-size: 1rem;
   }
 
   p {
-      font-size: 1.2rem;
+      font-size: 0.75rem;
   }
 
   .container {
@@ -158,7 +171,6 @@ p {
 
   .square {
       width: 90%;
-      height: auto;
       margin-bottom: 1rem;
       padding: 1rem;
   }
@@ -171,5 +183,9 @@ p {
   .landing-page {
       top: 10rem;
       left: 1rem;
+  }
+
+  .requirement:nth-child(odd) {
+      margin-right: 0; /* Removing right margin for small screens */
   }
 }
