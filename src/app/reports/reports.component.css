@@ -29,6 +29,7 @@
 .ratings-box h3, .medical-box h3, .other-box h3 {
   text-align: center;
   margin-bottom: 10px;
+  font-size: 2rem;
 }
 
 .rating-items, .medical-items, .other-items {
@@ -44,6 +45,7 @@
 .inline-container {
   display: flex;
   flex-wrap: wrap;
+  font-size: 1.5rem;
 }
 
 .inline-container span {

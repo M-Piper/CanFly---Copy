@@ -36,10 +36,10 @@
     <div class="field-group"> 
         <label id="selectLabel" for="notesType">Notes:</label> <!-- Dropdown for Notes -->
         <select id="notesType" (change)="onNoteTypeChange($event)">
-          <option value="" selected>Select a Note Type</option>
-          <option value="dualInstructionGivenNotes">Dual Instruction Given Notes</option>
-          <option value="floatTimeNotes">Float Time Notes</option>
-          <option value="VFRSimulatorNotes">VFR Simulator Notes</option>
+          <option value="" selected>Additional Time Types</option>
+          <option value="dualInstructionGivenTime">Dual Instruction Given Time</option>
+          <option value="floatTime">Float Time</option>
+          <option value="VFRSimulator">VFR Simulator Time</option>
         </select>
       </div>
   </div>
@@ -230,7 +230,7 @@
 </div>
 </div>
 
-<!-- VFR Simulator Notes -->
+<!-- VFR Simulator Time -->
 <div *ngIf="selectedNoteType === 'VFRSimulatorDualTime'">
     <div class="row">
         <div class="field-group">    

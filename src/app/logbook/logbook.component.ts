@@ -9,7 +9,7 @@ import { Flight } from '../models/flight';
 })
 export class LogbookComponent implements OnInit {
   logEntries: Flight[] = [];
-  selectedLogEntryID: number | null = null; // Change to store logEntryID instead of row index
+  selectedLogEntryID: number | null = null; // Changed to store logEntryID instead of row index
   response: any;
   showErrorMessage: boolean = false;
   showRotateMessage: boolean = false; //pop up used for small devices encouraging user to rotate
@@ -46,7 +46,7 @@ export class LogbookComponent implements OnInit {
     'routeFrom' : 'From',
     'routeVia' : 'Via',
     'routeTo' : 'To',
-    'dualInstructionGivenTime' : 'Dual Instruction Notes',
+    'dualInstructionGivenTime' : 'Dual Instruction Given Time',
     'floatTime' : 'Float Time',
     'VFRSimulatorDualTime' : 'VFR Sim Time',
     'pilotID' :'Pilot ID',
