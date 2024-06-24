@@ -5,30 +5,33 @@
 }
 
 .ratings-box {
-  background-color: rgb(242, 210, 250); /* Light transparent color */
+  background-color: #8cadac;
+  border: 3px solid #4A8A8D;
   margin: 10px 0;
   padding: 15px;
   border-radius: 10px;
+  
 }
 
 .medical-box {
-  background-color: rgba(115, 245, 212, 0.986); /* Light transparent color */
+  background-color: #c3c6d1;
+  border: 3px solid #77788a; 
   margin: 10px 0;
   padding: 15px;
   border-radius: 10px;
 }
 
 .other-box {
-  background-color: rgba(252, 253, 207, 0.952); /* Light transparent color */
+  background-color: #d4cdeb;
+  border: 3px solid #746992;
   margin: 10px 0;
   padding: 15px;
   border-radius: 10px;
-  border: 1px solid #ccc; /* Gray border for other-box */
 }
-
 .ratings-box h3, .medical-box h3, .other-box h3 {
   text-align: center;
   margin-bottom: 10px;
+  font-size: 2rem;
 }
 
 .rating-items, .medical-items, .other-items {
@@ -39,11 +42,13 @@
 .rating-item, .medical-item, .other-item {
   flex: 0 0 50%; /* Two items per row */
   padding: 5px 10px;
+  font-size: 1.5rem;
 }
 
 .inline-container {
   display: flex;
   flex-wrap: wrap;
+  font-size: 1.5rem;
 }
 
 .inline-container span {

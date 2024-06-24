@@ -7,6 +7,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { LandingComponent } from './landing/landing.component';
 import { AddFlightComponent } from './add-flight/add-flight.component';
 import { LogbookComponent } from './logbook/logbook.component';
+import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 import { ReportsComponent } from './reports/reports.component';
@@ -19,7 +20,8 @@ import { ReportsComponent } from './reports/reports.component';
     LandingComponent,
     AddFlightComponent,
     LogbookComponent,
-    ReportsComponent
+    ReportsComponent,
+    ProfileComponent
   ],
   
   imports: [

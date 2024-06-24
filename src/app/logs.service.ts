@@ -10,6 +10,22 @@ export interface pilotName {
   FullName: string;
 }
 
+export interface CompletedRating {
+  LongName: string;
+  ShortName: string;
+  DateAwarded: Date;
+}
+
+export interface Profile {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  streetAddress: string;
+  city: string;
+  province: string;
+  dob: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -49,4 +65,16 @@ export class LogsService {
     return this.http.get(this.APIUrl + 'GetPilotReport');
   }
   
+  getRequirements(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + 'GetRequirementSummary');
+}
+
+getCompletedRatings(): Observable<CompletedRating[]> {
+  return this.http.get<CompletedRating[]>(this.APIUrl + 'GetCompletedRatings');
+}
+
+getProfile(): Observable<Profile[]> {
+  return this.http.get<Profile[]>(this.APIUrl + 'GetProfile');
+}
+
 }

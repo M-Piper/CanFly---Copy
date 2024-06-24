@@ -34,12 +34,12 @@
       <button id="optionButton"(click)="showInstrumentInputs()"><b>+</b>Instrument</button> <!--instrument button-->
     </div>
     <div class="field-group"> 
-        <label id="selectLabel" for="notesType">Notes:</label> <!-- Dropdown for Notes -->
+        <label id="selectLabel" for="notesType">Additional Time Types:</label> <!-- Dropdown for Notes -->
         <select id="notesType" (change)="onNoteTypeChange($event)">
-          <option value="" selected>Select a Note Type</option>
-          <option value="dualInstructionGivenNotes">Dual Instruction Given Notes</option>
-          <option value="floatTimeNotes">Float Time Notes</option>
-          <option value="VFRSimulatorNotes">VFR Simulator Notes</option>
+          <option value="" selected>Dual Given, Float, VFR Time</option>
+          <option value="dualInstructionGivenTime">Dual Instruction Given Time</option>
+          <option value="floatTime">Float Time</option>
+          <option value="VFRSimulator">VFR Simulator Time</option>
         </select>
       </div>
   </div>
@@ -207,7 +207,7 @@
     
 </div>
 <!-- Dual Instruction Given Notes -->
-<div *ngIf="selectedNoteType === 'DualInstructionGivenTime'">
+<div *ngIf="selectedNoteType === 'dualInstructionGivenTime'">
     <div class="row">
     <div class="field-group">
     <label for="DualInstructionGivenTime">Dual Instruction Given Time:</label>
@@ -219,7 +219,7 @@
 </div>
 
 <!-- Float Time -->
-<div *ngIf="selectedNoteType === 'FloatTime'">
+<div *ngIf="selectedNoteType === 'floatTime'">
     <div class="row">
         <div class="field-group">    
     <label for="FloatTime">Float Time:</label>
@@ -230,7 +230,7 @@
 </div>
 </div>
 
-<!-- VFR Simulator Notes -->
+<!-- VFR Simulator Time -->
 <div *ngIf="selectedNoteType === 'VFRSimulatorDualTime'">
     <div class="row">
         <div class="field-group">    
