@@ -1,9 +1,15 @@
-<form [formGroup]="flightForm" (ngSubmit)="addFlight()">
 
+
+    <div class="submit-header">
+        <div class="message-wrapper">
+          <span class="added-message" *ngIf="showMessage">New entry has been added</span>
+        </div>
+      </div>
+<form [formGroup]="flightForm" (ngSubmit)="addFlight()">
  <!-- Button row -->
  <div class="row">
+    <div class="field-group"></div>
     <div class="field-group">
-      <span class="added-message" *ngIf="showMessage">New entry has been added</span>
       <button id="submitButton" type="submit">Submit</button> <!--submit button-->
     </div>
     <div class="field-group"> <!-- Dropdown for Type -->

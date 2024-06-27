@@ -113,13 +113,15 @@ export class AddFlightComponent implements OnInit {
           console.log('Log added successfully:', response);
           this.flightForm.reset();
           this.showMessage = true;
+          setTimeout(() => {
+            this.showMessage = false;
+          }, 2000); // Hide the message after 3 seconds
         },
         error: (error: any) => {
           console.error('Error adding log:', error);
         },
         complete: () => {
           console.info('Subscription completed.');
-          this.showMessage = true;
         }
       });
       //add form validation and error handling

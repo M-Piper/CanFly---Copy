@@ -97,39 +97,25 @@ label {
     padding: 10px;
     width: 100%;
 }
-
-.show-message {
-    font-family: "Madimi One", sans-serif;
+.message-wrapper {
+    position: relative;
+    height: 2rem; /* Set height equal to the height of your message */
+    margin-bottom: 20px; /* Adjust as needed to ensure spacing between elements */
+  }
+  
+  /* Center the message */
+  .added-message {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 1.5rem;
-    color: #135218;
-}
-
-.added-message {
-    font-size: 1rem;
     font-family: "Madimi One", sans-serif;
     color: navy;
     text-align: center;   
-    display: none; /* Initially hide the message */
     opacity: 1; /* Initially fully visible */
     transition: opacity 1s ease;
   }
-
-/*
-#submitButton {
-    background-color:#F2494C;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    width: 100%;
-    margin-bottom: 20px;} /* Space between button and next field */
-
 
 #submitButton:enabled {
     background-color: teal;
