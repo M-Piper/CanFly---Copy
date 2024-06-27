@@ -119,6 +119,7 @@ export class AddFlightComponent implements OnInit {
         },
         complete: () => {
           console.info('Subscription completed.');
+          this.showMessage = true;
         }
       });
       //add form validation and error handling
