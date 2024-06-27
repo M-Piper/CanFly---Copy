@@ -17,11 +17,11 @@
       <select id="aircraftType" (change)="onAircraftTypeChange($event)">
       <option value="" selected disabled>Select an activity type</option>
       <option value="aeroplane">Aeroplane</option>
-      <option value="helicopter">Helicopter</option>
-      <option value="gyrocopter">Gyrocopter</option>
-      <option value="glider">Glider</option>
-      <option value="balloon">Balloon</option>
-      <option value="ultra-light">Ultra-light Aeroplane</option>
+      <option value="helicopter" disabled>Helicopter</option>
+      <option value="gyrocopter" disabled>Gyrocopter</option>
+      <option value="glider" disabled>Glider</option>
+      <option value="balloon" disabled>Balloon</option>
+      <option value="ultra-light" disabled>Ultra-light Aeroplane</option>
     </select>
     </div>
     <div class="field-group" *ngIf="selectedAircraftType === 'aeroplane'"> <!-- Dropdown for Engine Type -->
