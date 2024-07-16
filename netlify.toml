@@ -1,5 +1,5 @@
 [build]
-  command = "command: ng build --configuration=production"
+  command = "command: ng build"
   publish = "dist/can-fly"
 
 [[redirects]]
