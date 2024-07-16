@@ -1,6 +1,7 @@
 [build]
   command = "command: ng build"
   publish = "dist/can-fly"
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/*"
