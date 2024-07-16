@@ -1,5 +1,5 @@
 [build]
-  command = "command: ng build"
+  command = "ng build"
   publish = "dist/can-fly"
   functions = "netlify/functions"
 
