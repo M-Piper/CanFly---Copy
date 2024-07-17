@@ -32,8 +32,8 @@ export interface Profile {
 })
 export class LogsService {
  //private readonly APIUrl = "http://localhost:5117/api/CanFly/";
-  private readonly APIUrl = "https://canfly-backend.azurewebsites.net/api/CanFly/";
-  
+ // private readonly APIUrl = "https://canfly-backend.azurewebsites.net/api/CanFly/";
+  private readonly APIUrl = "mysql://root:yAweUMNeUTfMIQtAtqZmzUpjNAqzvLQV@monorail.proxy.rlwy.net:18609/railway";
   constructor(private http: HttpClient) { }
 
   getLogs(): Observable<any> {
