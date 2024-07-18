@@ -18,21 +18,24 @@ export class LandingComponent implements OnInit {
     ngOnInit() {
       this.logsService.getTotalHours().subscribe((response: TotalHoursResponse) => {
           this.totalHours = response.TotalHours;
+          console.log("total hours log ", this.totalHours);
       });
 
       this.logsService.getCompletedRatings().subscribe((ratings: CompletedRating[]) => {
         this.completedRatings = ratings;
-        console.log(this.completedRatings);
+        console.log("completed ratings log ", this.completedRatings);
     });
 
       this.logsService.getName().subscribe((response: pilotName) => {
           this.pilotFullname = response.FullName;
+          console.log("pilotName logsService: ", this.pilotFullname);
       });
 
 
       // Fetch requirements data
       this.logsService.getRequirements().subscribe((response: Requirements[]) => {
         this.requirementData = this.requirementData = response;
+        console.log("requirements ", this.requirementData);
     });
     
   }

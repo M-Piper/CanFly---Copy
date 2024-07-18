@@ -140,7 +140,7 @@ export class LogbookComponent implements OnInit {
 
   getColumnAlias(key: string): string {
     const alias = this.columnAliases[key] || key;
-    console.log(`Key: ${key}, Alias: ${alias}`);
+    //console.log(`Key: ${key}, Alias: ${alias}`);
     return this.columnAliases[key] || key; // Return the display alias if available, otherwise return the original key
   }
 }
