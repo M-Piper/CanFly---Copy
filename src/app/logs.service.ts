@@ -33,7 +33,7 @@ export interface Profile {
 export class LogsService {
  //private readonly APIUrl = "http://localhost:5117/api/CanFly/";
  // private readonly APIUrl = "https://canfly-backend.azurewebsites.net/api/CanFly/";
-  private readonly APIUrl = "https://canflypipeline-production.up.railway.app/api/";
+  private readonly APIUrl = "https://canflypipeline-production.up.railway.app/api/CanFly/";
   constructor(private http: HttpClient) { }
 
   getLogs(): Observable<any> {
