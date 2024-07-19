@@ -9,7 +9,7 @@ import { Flight } from '../models/flight';
 })
 export class LogbookComponent implements OnInit {
   logEntries: Flight[] = [];
-  selectedLogEntryID: number = -2; // Changed to store logEntryID instead of row index
+  selectedLogEntryID: number | null = null; // Changed to store logEntryID instead of row index
   response: any;
   showErrorMessage: boolean = false;
   showRotateMessage: boolean = false; //pop up used for small devices encouraging user to rotate
@@ -100,12 +100,12 @@ export class LogbookComponent implements OnInit {
   }
   
   deleteLog() {
-    if (this.selectedLogEntryID > 0 && !isNaN(this.selectedLogEntryID)) {
+    if (this.selectedLogEntryID !== null && !isNaN(this.selectedLogEntryID)) {
       this.logsService.deleteLogs(this.selectedLogEntryID).subscribe(
         (response: any) => {
           console.log('Delete response:', response);
           this.getLogs(); // Refresh the log entries after deletion
-          this.selectedLogEntryID = -2; // Clear selection after successful deletion
+          this.selectedLogEntryID = null; // Clear selection after successful deletion
           this.showDeleteMessage(); // Show the delete confirmation message
         },
         (error: any) => {
