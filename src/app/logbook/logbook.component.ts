@@ -85,18 +85,26 @@ export class LogbookComponent implements OnInit {
     return [];
   }
 
+  showDeleteMessage() {
+    this.showDeletedMessage = true;
+    setTimeout(() => {
+      this.showDeletedMessage = false;
+    }, 2000); // Hide the message after 2 seconds
+  }
+
   toggleCheckbox(rowNumber: number) {
     const selectedEntry = this.logEntries[rowNumber];
-    this.selectedLogEntryID = selectedEntry['logEntryID'] as number; // Type assertion
+    this.selectedLogEntryID = selectedEntry.Id ?? null; // Use nullish coalescing to ensure it’s either number or null
   }
+  
   deleteLog() {
-    if (this.selectedLogEntryID !== null) {
+    if (this.selectedLogEntryID !== null && !isNaN(this.selectedLogEntryID)) {
       this.logsService.deleteLogs(this.selectedLogEntryID).subscribe(
         (response: any) => {
-          this.response = response;
-          this.getLogs();
-          this.selectedLogEntryID = null; // Clear selectedLogEntryID after successful deletion
-          this.showDeleteMessage();
+          console.log('Delete response:', response); // Optional debug statement
+          this.getLogs(); // Refresh the log entries after deletion
+          this.selectedLogEntryID = null; // Clear selection after successful deletion
+          this.showDeleteMessage(); // Show the delete confirmation message
         },
         (error: any) => {
           console.error('Error deleting log:', error);
@@ -104,17 +112,10 @@ export class LogbookComponent implements OnInit {
       );
       this.showErrorMessage = false;
     } else {
-      this.showErrorMessage = true;
+      this.showErrorMessage = true; // Show an error message if no entry is selected
     }
   }
-
-  showDeleteMessage() {
-    this.showDeletedMessage = true;
-    setTimeout(() => {
-      this.showDeletedMessage = false;
-    }, 2000); // Hide the message after 3 seconds
-  }
-
+  
   determineHiddenColumns() {
     const keys = this.getKeys();
     keys.forEach(key => {

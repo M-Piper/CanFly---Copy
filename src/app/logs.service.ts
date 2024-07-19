@@ -48,11 +48,15 @@ export class LogsService {
 }
 
 
-  deleteLogs(id: number): Observable<any> {
-    console.log('LOGS SERVICE: delete logs:', id);
-    return this.http.delete(this.APIUrl + 'DeleteLogs?id=' + id);
-  }
+  // deleteLogs(id: number): Observable<any> {
+  //   console.log('LOGS SERVICE: delete logs:', id);
+  //   return this.http.delete(this.APIUrl + 'DeleteLogs?id=' + id);
+  // }
 
+  deleteLogs(id: number): Observable<any> {
+    return this.http.delete(`${this.APIUrl}DeleteLogs/${id}`);
+  }
+  
   getTotalHours(): Observable<TotalHoursResponse> {
     return this.http.get<TotalHoursResponse>(this.APIUrl + 'GetTotalHours');
   }
