@@ -95,13 +95,15 @@ export class LogbookComponent implements OnInit {
   toggleCheckbox(rowNumber: number) {
     const selectedEntry = this.logEntries[rowNumber];
     this.selectedLogEntryID = selectedEntry.Id ?? null; // Use nullish coalescing to ensure it’s either number or null
+    console.log('selection check', this.selectedLogEntryID);
+    console.log('selection selected entry check', selectedEntry);
   }
   
   deleteLog() {
     if (this.selectedLogEntryID !== null && !isNaN(this.selectedLogEntryID)) {
       this.logsService.deleteLogs(this.selectedLogEntryID).subscribe(
         (response: any) => {
-          console.log('Delete response:', response); // Optional debug statement
+          console.log('Delete response:', response);
           this.getLogs(); // Refresh the log entries after deletion
           this.selectedLogEntryID = null; // Clear selection after successful deletion
           this.showDeleteMessage(); // Show the delete confirmation message
@@ -112,6 +114,7 @@ export class LogbookComponent implements OnInit {
       );
       this.showErrorMessage = false;
     } else {
+      console.log('delete error debug', this.selectedLogEntryID);
       this.showErrorMessage = true; // Show an error message if no entry is selected
     }
   }
