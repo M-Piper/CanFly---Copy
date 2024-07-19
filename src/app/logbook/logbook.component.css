@@ -78,6 +78,13 @@
     opacity: 1; /* Initially fully visible */
     transition: opacity 1s ease;
   }
+
+  .error-message {
+    font-size: 1rem;
+    font-family: "Madimi One", sans-serif;
+    color: red;
+    text-align: center;   
+  }
   
 .hidden {
   opacity: 0; /* Fully transparent */

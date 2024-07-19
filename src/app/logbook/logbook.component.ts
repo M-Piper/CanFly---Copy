@@ -9,7 +9,7 @@ import { Flight } from '../models/flight';
 })
 export class LogbookComponent implements OnInit {
   logEntries: Flight[] = [];
-  selectedLogEntryID: number | null = null; // Changed to store logEntryID instead of row index
+  selectedLogEntryID: number = 0; // Changed to store logEntryID instead of row index
   response: any;
   showErrorMessage: boolean = false;
   showRotateMessage: boolean = false; //pop up used for small devices encouraging user to rotate
@@ -92,26 +92,21 @@ export class LogbookComponent implements OnInit {
     }, 2000); // Hide the message after 2 seconds
   }
 
-
   toggleCheckbox(rowNumber: number) {
     const selectedEntry = this.logEntries[rowNumber];
-    if (selectedEntry && selectedEntry.Id) {
-      this.selectedLogEntryID = selectedEntry.Id;
-      console.log('selection check', this.selectedLogEntryID);
-      console.log('selection selected entry check', selectedEntry);
-    } else {
-      this.selectedLogEntryID = null;
-    }
+   this.selectedLogEntryID = selectedEntry['logEntryID'] as number;
+    console.log('selection check', this.selectedLogEntryID);
+    console.log('selection selected entry check', selectedEntry);
   }
   
   deleteLog() {
-    if (this.selectedLogEntryID !== null && !isNaN(this.selectedLogEntryID)) {
+    if (this.selectedLogEntryID > 0 && !isNaN(this.selectedLogEntryID)) {
       this.logsService.deleteLogs(this.selectedLogEntryID).subscribe(
         (response: any) => {
           console.log('Delete response:', response);
-          this.getLogs();
-          this.selectedLogEntryID = null;
-          this.showDeleteMessage();
+          this.getLogs(); // Refresh the log entries after deletion
+          this.selectedLogEntryID = 0; // Clear selection after successful deletion
+          this.showDeleteMessage(); // Show the delete confirmation message
         },
         (error: any) => {
           console.error('Error deleting log:', error);
@@ -120,7 +115,7 @@ export class LogbookComponent implements OnInit {
       this.showErrorMessage = false;
     } else {
       console.log('delete error debug', this.selectedLogEntryID);
-      this.showErrorMessage = true;
+      this.showErrorMessage = true; // Show an error message if no entry is selected
     }
   }
   

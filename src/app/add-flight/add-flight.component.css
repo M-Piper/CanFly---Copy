@@ -109,9 +109,6 @@ label {
     font-family: "Madimi One", sans-serif;
     color: navy;
     text-align: center;   
-    display: none; /* Initially hide the message */
-    opacity: 1; /* Initially fully visible */
-    transition: opacity 1s ease;
   }
 
 /*
