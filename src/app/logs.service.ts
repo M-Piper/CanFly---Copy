@@ -54,7 +54,7 @@ export class LogsService {
   // }
 
   deleteLogs(id: number): Observable<any> {
-    return this.http.delete(`${this.APIUrl}DeleteLogs/${id}`);
+    return this.http.delete(`${this.APIUrl}${id}`);
   }
   
   getTotalHours(): Observable<TotalHoursResponse> {
