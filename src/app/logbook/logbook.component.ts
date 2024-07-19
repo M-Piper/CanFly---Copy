@@ -94,7 +94,7 @@ export class LogbookComponent implements OnInit {
 
   toggleCheckbox(rowNumber: number) {
     const selectedEntry = this.logEntries[rowNumber];
-    this.selectedLogEntryID = selectedEntry.Id ?? null; // Use nullish coalescing to ensure it’s either number or null
+   this.selectedLogEntryID = selectedEntry.Id as number;
     console.log('selection check', this.selectedLogEntryID);
     console.log('selection selected entry check', selectedEntry);
   }
